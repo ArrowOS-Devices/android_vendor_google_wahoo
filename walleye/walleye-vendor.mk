@@ -162,11 +162,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/product/etc/permissions/privapp-permissions-google-p.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-p.xml \
     vendor/google/walleye/proprietary/product/etc/permissions/split-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/split-permissions-google.xml \
     vendor/google/walleye/proprietary/product/etc/permissions/vzw_mvs_permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vzw_mvs_permissions.xml \
+    vendor/google/walleye/proprietary/product/etc/sysconfig/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
     vendor/google/walleye/proprietary/product/etc/sysconfig/nexus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nexus.xml \
     vendor/google/walleye/proprietary/product/etc/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml \
     vendor/google/walleye/proprietary/product/etc/sysconfig/whitelist_com.android.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/whitelist_com.android.omadm.service.xml \
     vendor/google/walleye/proprietary/product/lib/libdmengine.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmengine.so \
     vendor/google/walleye/proprietary/product/lib/libdmjavaplugin.so:$(TARGET_COPY_OUT_PRODUCT)/lib/libdmjavaplugin.so \
+    vendor/google/walleye/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
+    vendor/google/walleye/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
     vendor/google/walleye/proprietary/product/priv-app/EuiccSupportPixel/esim0.img:$(TARGET_COPY_OUT_PRODUCT)/priv-app/EuiccSupportPixel/esim0.img \
     vendor/google/walleye/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libakuaf.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libakuaf.so \
     vendor/google/walleye/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libmotricity.so \
@@ -175,7 +178,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/system_ext/etc/permissions/privapp-permissions-google-se.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-se.xml \
     vendor/google/walleye/proprietary/system_ext/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptXHD_encoder.so \
     vendor/google/walleye/proprietary/system_ext/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libaptX_encoder.so
-
 
 PRODUCT_PACKAGES += \
     QAS_DVC_MSP_VZW \
@@ -188,13 +190,28 @@ PRODUCT_PACKAGES += \
     qcrilmsgtunnel \
     VZWAPNLib \
     AmbientSensePrebuilt \
+    AppDirectedSMSService \
+    CarrierServices \
     CarrierSettings \
+    CarrierWifi \
+    ConnMO \
+    DCMO \
+    DMService \
+    DevicePersonalizationPrebuiltPixel2 \
     DiagMon \
     EuiccGoogle \
     EuiccSupportPixel \
     HardwareInfo \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
+    MyVerizonServices \
+    OBDM_Permissions \
+    SprintDM \
+    SprintHM \
+    TetheringEntitlement \
+    WfcActivation \
+    obdm_stub \
+    CarrierSetup \
     cneapiclient \
     com.google.android.camera.experimental2017 \
     com.quicinc.cne.api-V1.0-java \
@@ -942,13 +959,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/NA/USCC/Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/NA/USCC/Commercial/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/NA/Verizon/hVoLTE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/NA/Verizon/hVoLTE/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/NA/Videotron/non_VoLTE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/NA/Videotron/non_VoLTE/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/common/PixelLite/Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/common/PixelLite/Commercial/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/common/WildCard/WildCard/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/common/WildCard/WildCard/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/mbn.ver:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/mbn.ver \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/mbn_sw.dig:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/mbn_sw.dig \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/oem_sw.txt:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/oem_sw.txt \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/commerci/volte_op/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/commerci/volte_op/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmhk/commerci/volte_op/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmhk/commerci/volte_op/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/commerci/volte_su/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/commerci/volte_su/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/agnss_lo/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/agnss_lo/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/conf_vol/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/conf_vol/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/eps_only/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/eps_only/mcfg_sw.mbn \
@@ -957,31 +969,44 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/rrlp_loc/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/rrlp_loc/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/tgl_comb/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/tgl_comb/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/w_irat_c/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmcc/lab/w_irat_c/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cmhk/commerci/volte_op/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cmhk/commerci/volte_op/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/hvolte_o/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/hvolte_o/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/openmkt/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/openmkt/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/subsidiz/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/subsidiz/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/volte_op/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/commerci/volte_op/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/volte_co/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/volte_co/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/cta/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/cta/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/test/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/test/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/test_eps/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/test_eps/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/test_no_/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/test_no_/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/volte_co/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/ct/lab/volte_co/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cu/commerci/openmkt/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cu/commerci/openmkt/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cu/commerci/subsidiz/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cu/commerci/subsidiz/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cu/commerci/volte/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cu/commerci/volte/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/china/cu/lab/test/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/china/cu/lab/test/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/common/PixelLite/Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/common/PixelLite/Commercial/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/common/WildCard/WildCard/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/common/WildCard/WildCard/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/3hk/commerci/hk/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/3hk/commerci/hk/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/ais/commerci/volte/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/ais/commerci/volte/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/apt/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/apt/commerci/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/cht/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/cht/commerci/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/dtac/commerci/volte/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/dtac/commerci/volte/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/fareasto/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/fareasto/commerci/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/hkt/commerci/hk/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/hkt/commerci/hk/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/cht/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/cht/commerci/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/m1/commerci/sg/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/m1/commerci/sg/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/p1/commerci/malaysia/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/p1/commerci/malaysia/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/singtel/commerci/singapor/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/singtel/commerci/singapor/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/smartone/commerci/hk/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/smartone/commerci/hk/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/vowifi/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/vowifi/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/vowifi/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/smartfre/commerci/vowifi/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/smartone/commerci/hk/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/smartone/commerci/hk/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/starhub/commerci/singapor/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/starhub/commerci/singapor/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/tm/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/tm/commerci/mcfg_sw.mbn \
-    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/tstar/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/tstar/commerci/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/truemove/commerci/volte/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/truemove/commerci/volte/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/tstar/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/tstar/commerci/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/umobile/commerci/malaysia/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/umobile/commerci/malaysia/mcfg_sw.mbn \
     vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/generic/sea/ytl/commerci/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/generic/sea/ytl/commerci/mcfg_sw.mbn \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/mbn.ver:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/mbn.ver \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/mbn_sw.dig:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/mbn_sw.dig \
+    vendor/google/walleye/proprietary/vendor/mbn/mcfg/configs/mcfg_sw/oem_sw.txt:$(TARGET_COPY_OUT_VENDOR)/mbn/mcfg/configs/mcfg_sw/oem_sw.txt \
     vendor/google/walleye/proprietary/vendor/media/LMspeed_508.emd:$(TARGET_COPY_OUT_VENDOR)/media/LMspeed_508.emd \
     vendor/google/walleye/proprietary/vendor/media/PFFprec_600.emd:$(TARGET_COPY_OUT_VENDOR)/media/PFFprec_600.emd \
     vendor/google/walleye/proprietary/vendor/media/ensemble_fd_model.emd:$(TARGET_COPY_OUT_VENDOR)/media/ensemble_fd_model.emd \
